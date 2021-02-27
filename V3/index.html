@@ -47,7 +47,22 @@
                 
             </ul>
         </nav>
+<!-- MM5LO4 This is the code for the collapsible menues -->
+<p>Hiking:</p>
+<button class="collapsible">Click Read More</button>
+<div class="content">
+  <p>Hiking on Hurricane ridge is one of the main destinations for hikers, the trails as well maintained and there is some excellent scenary to enjoy</p>
+</div>
 
+<p>Other Attractions:</p>
+<button class="collapsible">Click to view more</button>
+<div class="content">
+  <p>There are several rivers to explore with plenty of access and Lake Crescent is near by.</p>
+</div>
+<button class="collapsible">Click to read more</button>
+<div class="content">
+  <p>Endless wildlife and vegetation</p>
+</div>
 
 <p> 
 		Located in the North West corner of Washington State is the Olympic Mountain Range lies the Olympic National Park.  Whether you're a 
@@ -64,11 +79,11 @@
 		Day hiking along with skiing and snowshoeing are some of the other activities most of the year. </p> 
 
 <!--- M3LO2 Demonstrate floating elements :-->
-<img style="float: left; margin: 0px 15px 15px 0px;" src="ridge_peak.jpg" width="500" /
+<img style="float: left; margin: 0px 15px 15px 0px;" src="ridge_peak.jpg" width="500" />
 
 <h2>Day Hiking</h2> 
 
-<p>Its not uncommon to come across several speciecies of wildlife along any of the numerous trails.  
+<p>Its not uncommon to come across several species of wildlife along any of the numerous trails.  
 Don't be surprised to walk around any bend in a trail and stumble upon a black bear or in rare occasions a mountain lion.  
 If you're lucky enough you may even get a few pictures of the wildlife.</p>
 
@@ -77,13 +92,32 @@ If you're lucky enough you may even get a few pictures of the wildlife.</p>
 <img style="float: right; margin: 0px 15px 15px 0px;" src="hurricane_ridge.jpg" width="500" />
 <h2>Camping</h2> 
 
-<p>Along most trails theres camping available.  Some sites have services such as a port-o-potty and lockers to keep your food secure fom the animals. 
+<p>Along most trails theres camping available.  Some sites have services such as a port-o-potty and lockers to keep your food secure from the animals. 
  Be sure to check your map and readthe information prived at the trailhead before your adventure.</p> 
 
 <p></p> 
-
+<br>
+<br>
+<br>
  
+<body>
 
+<h1>When to go</h1>
+<!--- M6LO3-04 here is a multiple row multiple column table that provides information on park hours -->
+<table>
+  <tr>
+    <th>Park</th>
+    <th>Hours</th>
+  </tr>
+  <tr>
+    <td>Mon-Fri</td>
+    <td>8:00am-9:00pm</td>
+  </tr>
+  <tr>
+    <td>Weekends</td>
+    <td>Sun up to sun down</td>
+  </tr>
+</table>
 
 <br>
 <br>
@@ -116,5 +150,22 @@ If you're lucky enough you may even get a few pictures of the wildlife.</p>
 <p>Steve Robinson &#8226;  Port Ludlow WA. &#8226; 98365 &#8226; Email: <a href="steve@ilove2hike.com">Steve@ilove2hike.com</a>
 
 </div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
   </body>
     </html>
