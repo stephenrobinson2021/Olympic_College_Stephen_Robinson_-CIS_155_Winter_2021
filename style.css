@@ -1,0 +1,252 @@
+
+<!--
+    Author Steve Robinson
+    Date: 1/24/2021  
+
+    Filename:  stylesheet
+   -->
+
+M2LO3 Demonstrate style precedence and inheritance in CSS (CSS, this item should be specified 2 times, 
+once where precedence is applied and once where inheritance is applied; 
+see 2-3d Style Specificity and Precedence, and 2-3e Style Inheritance) 
+
+p
+{
+   text-align: center;
+   font-family: sans-serif;
+   font-size: 20px;
+   border: 0px;
+   padding: 0px;
+}
+#Menu
+{
+   position: absolute;
+   background-color: 
+   width: 90%;
+   height: 80px;
+}
+
+
+/* 
+M2LO6  Demonstrate a CSS id and a CSS class selector (CSS, specify 2 times,
+show a use of id and a use of class, see 2-9b Attribute selectors)
+M3LO9 Demonstrate fixed, static or inherited positioning
+*/ 
+Use of class selector to change color of h1 header.
+ */
+#Header
+{
+   position: absolute;
+   top: 80px;
+   background-color: 
+   width: 100%;
+   height: 80px;
+   
+}
+/* 
+M2LO5 Demonstrate contextual selectors (CSS, specify 2 times, showing two different types of contextual
+selectors as shown in Figure 2-12, Contextual Selectors, of the textbook) 
+ 
+Matching the paragraph element that is a child of the article.
+
+M2LO11 Demonstrate a pseudo-classes and a pseudo-element selector (CSS, specify 2 times,
+show one pseudo-class and one pseudo-element, see 2-18 Using Pseudo-Classes and Pseudo-Elements)
+
+Used a pseudo-element to enlarge the first line of the paragraph in the article.
+*/
+
+article > p::first-line{
+  font-size: 1.15em;
+}
+
+article > nav > ul > li{ 
+  margin-right: 20px; 
+}
+
+/* Styles */	
+
+/*
+M2LO11 Demonstrate a pseudo-classes and a pseudo-element selector (CSS, specify 2 times,
+show one pseudo-class and one pseudo-element, see 2-18 Using Pseudo-Classes and Pseudo-Elements)
+
+Used a pseudo-class to color code the Shiba Inu coat colors.
+*/
+
+/*
+M2LO13 Demonstrate how CSS can change presentation of textual elements (CSS, these are styles that impact navigation text that is rendered on the page)
+*/
+/*
+M2LO12 Demonstrate how CSS can change presentation of page elements
+(CSS, these are styles that impact page elements rather than impacting text on the page)
+
+The change in this was removing the bullets under the navigation portion (Home, History, Health, About).
+*/
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+/* Image Styes */
+
+#pictureone img:ridge_peak.jpg {
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	top: 50px;
+	left: 50px;
+}
+
+#picturetwo img:hurricane_ridge.jpg {
+	width: 500px;
+	height: 500px;
+	position: left;
+	top: 50px;
+	left: 50px;
+}
+
+/*
+M2LO15 Apply colors using CSS (CSS, see 2-5 Working with Color in CSS)
+*/
+
+.footer
+{
+   position: center;
+   top: 360px;
+   background-color: black;
+   width: 100%;
+   height: 50px;
+   text-align: center;
+   color: white;
+}
+/*M5LO4 Use CSS for pull-down menus (or collapsible/expandable areas) (CSS, note where the menu is on your site and how it behaves)*/
+
+.collapsible {
+  background-color: rgb(35, 81, 47);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+
+/*M5LO3 Use media queries to format a page differently for phones vs. PCs. */
+
+@media only screen and (max-device-width: 480px) {
+        
+		div#wrapper {
+            width: 400px;
+        }
+
+        div#header {
+            background-image: url(media-queries-phone.jpg);
+            height: 93px;
+            position: relative;
+        }
+
+        div#header h1 {
+            font-size: 140%;
+        }
+
+        #content {
+            float: none;
+            width: 100%;
+        }
+
+        #navigation {
+            float:none;
+            width: auto;
+        }
+    }
+	
+/*M6LO7 Demonstrate how to format a table with CSS */	
+
+
+table, th, td {
+  border: 1px solid black;
+}
+
+*/M8L010 CSS elements for M7LO8, M7LO9. and M7L010 
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
